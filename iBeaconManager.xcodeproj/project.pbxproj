@@ -11,6 +11,10 @@
 		556B8C6C1E72BEED00D8966B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B8C6B1E72BEED00D8966B /* ViewController.swift */; };
 		556B8C6E1E72BEED00D8966B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556B8C6D1E72BEED00D8966B /* Assets.xcassets */; };
 		556B8C711E72BEED00D8966B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556B8C6F1E72BEED00D8966B /* Main.storyboard */; };
+		556B8C7C1E72BFC200D8966B /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B8C7A1E72BFC200D8966B /* Beacon.swift */; };
+		556B8C7D1E72BFC200D8966B /* RealmAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B8C7B1E72BFC200D8966B /* RealmAccessor.swift */; };
+		556B8C801E72BFD800D8966B /* BeaconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B8C7F1E72BFD800D8966B /* BeaconModel.swift */; };
+		94BF9A551C6253A5E3F325B2 /* Pods_iBeaconManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5DF7CD4186CFE1AFE97C05 /* Pods_iBeaconManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,12 @@
 		556B8C6D1E72BEED00D8966B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		556B8C701E72BEED00D8966B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		556B8C721E72BEED00D8966B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		556B8C7A1E72BFC200D8966B /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		556B8C7B1E72BFC200D8966B /* RealmAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmAccessor.swift; sourceTree = "<group>"; };
+		556B8C7F1E72BFD800D8966B /* BeaconModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconModel.swift; sourceTree = "<group>"; };
+		A00BBD88B4DCB65EC29591AA /* Pods-iBeaconManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBeaconManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-iBeaconManager/Pods-iBeaconManager.release.xcconfig"; sourceTree = "<group>"; };
+		A623C0402A8555DA9AD68DB7 /* Pods-iBeaconManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBeaconManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iBeaconManager/Pods-iBeaconManager.debug.xcconfig"; sourceTree = "<group>"; };
+		CB5DF7CD4186CFE1AFE97C05 /* Pods_iBeaconManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iBeaconManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94BF9A551C6253A5E3F325B2 /* Pods_iBeaconManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		414C8FAA74757D42E99857D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB5DF7CD4186CFE1AFE97C05 /* Pods_iBeaconManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		556B8C5D1E72BEED00D8966B = {
 			isa = PBXGroup;
 			children = (
 				556B8C681E72BEED00D8966B /* iBeaconManager */,
 				556B8C671E72BEED00D8966B /* Products */,
+				B21B3C3B856A33C001E12C63 /* Pods */,
+				414C8FAA74757D42E99857D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,13 +73,49 @@
 		556B8C681E72BEED00D8966B /* iBeaconManager */ = {
 			isa = PBXGroup;
 			children = (
+				556B8C7E1E72BFCB00D8966B /* Models */,
+				556B8C791E72BFB100D8966B /* Realm */,
+				556B8C781E72BFA500D8966B /* ViewControllers */,
 				556B8C691E72BEED00D8966B /* AppDelegate.swift */,
-				556B8C6B1E72BEED00D8966B /* ViewController.swift */,
 				556B8C6D1E72BEED00D8966B /* Assets.xcassets */,
 				556B8C6F1E72BEED00D8966B /* Main.storyboard */,
 				556B8C721E72BEED00D8966B /* Info.plist */,
 			);
 			path = iBeaconManager;
+			sourceTree = "<group>";
+		};
+		556B8C781E72BFA500D8966B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				556B8C6B1E72BEED00D8966B /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		556B8C791E72BFB100D8966B /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				556B8C7A1E72BFC200D8966B /* Beacon.swift */,
+				556B8C7B1E72BFC200D8966B /* RealmAccessor.swift */,
+			);
+			name = Realm;
+			sourceTree = "<group>";
+		};
+		556B8C7E1E72BFCB00D8966B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				556B8C7F1E72BFD800D8966B /* BeaconModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B21B3C3B856A33C001E12C63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A623C0402A8555DA9AD68DB7 /* Pods-iBeaconManager.debug.xcconfig */,
+				A00BBD88B4DCB65EC29591AA /* Pods-iBeaconManager.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +125,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 556B8C751E72BEED00D8966B /* Build configuration list for PBXNativeTarget "iBeaconManager" */;
 			buildPhases = (
+				CA8E2282F3E82C6F939B74EC /* [CP] Check Pods Manifest.lock */,
 				556B8C621E72BEED00D8966B /* Sources */,
 				556B8C631E72BEED00D8966B /* Frameworks */,
 				556B8C641E72BEED00D8966B /* Resources */,
+				A6630DA30D87283F84A80815 /* [CP] Embed Pods Frameworks */,
+				B1161B1F0C4AE8FF7F2804F9 /* [CP] Copy Pods Resources */,
+				556B8C811E72C0D100D8966B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -127,13 +188,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		556B8C811E72C0D100D8966B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		A6630DA30D87283F84A80815 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iBeaconManager/Pods-iBeaconManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1161B1F0C4AE8FF7F2804F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iBeaconManager/Pods-iBeaconManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA8E2282F3E82C6F939B74EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		556B8C621E72BEED00D8966B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				556B8C6C1E72BEED00D8966B /* ViewController.swift in Sources */,
+				556B8C801E72BFD800D8966B /* BeaconModel.swift in Sources */,
 				556B8C6A1E72BEED00D8966B /* AppDelegate.swift in Sources */,
+				556B8C7D1E72BFC200D8966B /* RealmAccessor.swift in Sources */,
+				556B8C7C1E72BFC200D8966B /* Beacon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +368,9 @@
 		};
 		556B8C761E72BEED00D8966B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A623C0402A8555DA9AD68DB7 /* Pods-iBeaconManager.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = iBeaconManager/Info.plist;
@@ -256,7 +383,9 @@
 		};
 		556B8C771E72BEED00D8966B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A00BBD88B4DCB65EC29591AA /* Pods-iBeaconManager.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = iBeaconManager/Info.plist;
@@ -286,6 +415,7 @@
 				556B8C771E72BEED00D8966B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

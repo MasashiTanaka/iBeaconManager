@@ -1,0 +1,11 @@
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+  - statement_position
+
+excluded:
+  - Pods
+
+variable_name:
+  excluded:
+  - id

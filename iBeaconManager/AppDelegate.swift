@@ -2,16 +2,14 @@
 //  AppDelegate.swift
 //  iBeaconManager
 //
-//  Created by Masashi Tanaka on 2017/03/10.
-//  Copyright © 2017年 Masashi Tanaka. All rights reserved.
+//  Created by Masashi Tanaka on 2017/02/17.
+//  Copyright © 2017年 Masashi Tanaka All rights reserved.
 //
 
 import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -21,6 +19,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-
 }
-
