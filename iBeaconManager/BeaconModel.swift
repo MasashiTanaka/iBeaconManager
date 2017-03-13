@@ -11,16 +11,7 @@ import CoreLocation
 class BeaconModel {
     
     internal var id: Int
-    internal var uuidString: String? {
-        didSet {
-            if let uuidString = self.uuidString {
-                self.proximityUUID = NSUUID.init(uuidString: uuidString)
-            } else {
-                self.proximityUUID = nil
-            }
-        }
-    }
-    private var proximityUUID: NSUUID?
+    internal var uuidString: String?
     internal var major: Int?
     internal var minor: Int?
     private let measuredPower: Int8 = -60
@@ -36,7 +27,8 @@ class BeaconModel {
     // MARK: Internal
 
     internal func advertisement() -> [String: Any]? {
-        guard let proximityUUID = self.proximityUUID else { return nil }
+        guard let uuidString = self.uuidString else { return nil }
+        guard let proximityUUID = NSUUID.init(uuidString: uuidString) else { return nil }
 
         let major = UInt16(self.major ?? 1)
         let minor = UInt16(self.minor ?? 1)

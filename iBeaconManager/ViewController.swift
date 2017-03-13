@@ -104,9 +104,17 @@ extension ViewController: NSTableViewDataSource {
         case .cellUUID:
             beacon.uuidString = object as? String
         case .cellMajor:
-            beacon.major = object as? Int
+            if let value = object as? String {
+                beacon.major = Int(value)
+            } else {
+                beacon.major = nil
+            }
         case .cellMinor:
-            beacon.minor = object as? Int
+            if let value = object as? String {
+                beacon.minor = Int(value)
+            } else {
+                beacon.minor = nil
+            }
         case .cellToggle:
             let isOn = object as? Bool ?? false
             
