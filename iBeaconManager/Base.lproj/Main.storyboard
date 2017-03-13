@@ -693,13 +693,13 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="2Nf-7F-Eb5" id="HVc-Et-zc0">
-                                            <rect key="frame" x="0.0" y="0.0" width="494" height="246"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="486" height="246"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="CellUUID" width="340" minWidth="40" maxWidth="1000" id="c1W-CT-2tH">
+                                                <tableColumn identifier="CellUUID" width="290" minWidth="40" maxWidth="1000" id="c1W-CT-2tH">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="UUID">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -712,7 +712,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                 </tableColumn>
-                                                <tableColumn identifier="CellMajor" width="40" minWidth="40" maxWidth="1000" id="IXt-59-mpT">
+                                                <tableColumn identifier="CellMajor" width="60" minWidth="40" maxWidth="1000" id="IXt-59-mpT">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Major">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -725,7 +725,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                 </tableColumn>
-                                                <tableColumn identifier="CellMinor" width="38" minWidth="10" maxWidth="3.4028234663852886e+38" id="Dc0-LB-iA3">
+                                                <tableColumn identifier="CellMinor" width="60" minWidth="10" maxWidth="3.4028234663852886e+38" id="Dc0-LB-iA3">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Minor">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -763,7 +763,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="2Nf-7F-Eb5">
-                                    <rect key="frame" x="0.0" y="0.0" width="494" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="486" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
