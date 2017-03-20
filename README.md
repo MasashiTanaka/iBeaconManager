@@ -1,7 +1,9 @@
 # iBeaconManager
 
-## 機能
+![Screen Shot](https://raw.githubusercontent.com/sre20313/iBeaconManager/master/Images/screenshot1.png)
 
-* UUIDの入力は必須、未入力時はONにならない
-* Major,Minorが未入力の場合は1を自動で設定
-* アプリ終了時に設定内容を保存
+## Usage
+
+* Enter of UUID is required.
+* If 'Major' and 'Minor' are not entered, 1 is automatically set.
+* Save your entered at the finish of the application.
