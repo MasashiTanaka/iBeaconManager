@@ -10,8 +10,8 @@ import RealmSwift
 
 final class Beacon: Object {
 
-    dynamic internal var id: Int = 0
-    dynamic internal var uuidString: String?
+    @objc dynamic internal var id: Int = 0
+    @objc dynamic internal var uuidString: String?
     internal let major = RealmOptional<Int>()
     internal let minor = RealmOptional<Int>()
 

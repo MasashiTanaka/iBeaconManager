@@ -26,9 +26,9 @@ class BeaconAccessor: RealmAccessor {
     internal func initializeData() -> Results<Beacon> {
         var beacons: [Beacon] = []
         
-        for i in 0..<5 {
+        for val in 0..<5 {
             let beacon = Beacon()
-            beacon.id = i
+            beacon.id = val
             beacons.append(beacon)
         }
         

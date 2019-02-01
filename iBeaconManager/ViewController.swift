@@ -36,7 +36,7 @@ class ViewController: NSViewController {
     // MARK: Private
 
     private func setup() {
-        NotificationCenter.default.addObserver(self, selector: #selector(willTerminateNotification(_:)), name: Notification.Name.NSApplicationWillTerminate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(willTerminateNotification(_:)), name: NSApplication.willTerminateNotification, object: nil)
         
         self.peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
         
@@ -80,7 +80,7 @@ class ViewController: NSViewController {
     
     // MARK: Internal
     
-    internal func willTerminateNotification(_ notification: Notification) {
+    @objc internal func willTerminateNotification(_ notification: Notification) {
         self.beaconAccessor.white(self.beacons)
     }
     
@@ -96,7 +96,7 @@ extension ViewController: NSTableViewDataSource {
     
     func tableView(_ tableView: NSTableView, setObjectValue object: Any?, for tableColumn: NSTableColumn?, row: Int) {
         guard let tableColumn = tableColumn else { return }
-        guard let identifier = CellIdentifier.init(rawValue: tableColumn.identifier) else { return }
+        guard let identifier = CellIdentifier.init(rawValue: tableColumn.identifier.rawValue) else { return }
         
         let beacon = self.beacons[row]
         
@@ -154,7 +154,7 @@ extension ViewController: NSTableViewDelegate {
 
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         guard let identifier = tableColumn?.identifier else { return nil }
-        guard let cellIdentifier = CellIdentifier.init(rawValue: identifier) else { return nil }
+        guard let cellIdentifier = CellIdentifier.init(rawValue: identifier.rawValue) else { return nil }
         
         return self.cellValue(row: row, cellIdentifier: cellIdentifier)
     }
